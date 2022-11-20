@@ -4,4 +4,5 @@ type Person = {
   height: number;
   weight: number;
   job: string;
+  city: string;
 };
