@@ -1,0 +1,26 @@
+name: Sync Subtree
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  subtree:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: jmadler/git-subtree-action
+        uses: jmadler/git-subtree-action@1.0
+        with:
+          github_token: ${{ secrets.GHB_TOKEN }}
+          git_name: bvodola
+          git_email: bvodola@gmail.com
+          repo: https://github.com/bvodola/sbt.git
+          action: push
+          position: master
+          prefix: shared
+          squash: false
