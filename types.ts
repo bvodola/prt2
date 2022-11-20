@@ -3,4 +3,5 @@ type Person = {
   age: number;
   height: number;
   weight: number;
+  job: string;
 };
