@@ -13,7 +13,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: jmadler/git-subtree-action
+      - name: git-subtree-pull
+        uses: jmadler/git-subtree-action@1.0
+        with:
+          github_token: ${{ secrets.GHB_TOKEN }}
+          git_name: bvodola
+          git_email: bvodola@gmail.com
+          repo: https://github.com/bvodola/sbt.git
+          action: pull
+          position: master
+          prefix: subtree-test
+          squash: false
+      - name: git-subtree-push
         uses: jmadler/git-subtree-action@1.0
         with:
           github_token: ${{ secrets.GHB_TOKEN }}
