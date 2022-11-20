@@ -22,5 +22,5 @@ jobs:
           repo: https://github.com/bvodola/sbt.git
           action: push
           position: master
-          prefix: shared
+          prefix: subtree-test
           squash: false
