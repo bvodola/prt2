@@ -5,4 +5,5 @@ type Person = {
   weight: number;
   job: string;
   city: string;
+  state: string;
 };
