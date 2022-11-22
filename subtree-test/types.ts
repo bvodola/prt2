@@ -6,4 +6,5 @@ type Person = {
   job: string;
   city: string;
   state: string;
+  country: string;
 };
