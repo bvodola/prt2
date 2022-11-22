@@ -7,4 +7,5 @@ type Person = {
   city: string;
   state: string;
   country: string;
+  planet: string;
 };
